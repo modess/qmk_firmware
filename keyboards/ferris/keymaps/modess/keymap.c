@@ -125,31 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM reset_combo[] = {MO(1), KC_SPM3, KC_BSM4, OSL(2), COMBO_END};
 const uint16_t PROGMEM num_layer_combo[] = {KC_SPM3, KC_BSM4, COMBO_END};
 
-const uint16_t PROGMEM enter_combo[] = {KC_SPM3, KC_MT, COMBO_END};
-const uint16_t PROGMEM escape_combo[] = {KC_SPM3, KC_MS, COMBO_END};
-const uint16_t PROGMEM tab_combo[] = {KC_SPM3, KC_MR, COMBO_END};
-
-const uint16_t PROGMEM dot_combo[] = {KC_BSM4, KC_ME, COMBO_END};
-const uint16_t PROGMEM comma_combo[] = {KC_BSM4, KC_MN, COMBO_END};
-const uint16_t PROGMEM question_mark_combo[] = {KC_BSM4, KC_MI, COMBO_END};
-const uint16_t PROGMEM exclamation_mark_combo[] = {KC_BSM4, KC_MO, COMBO_END};
-const uint16_t PROGMEM slash_combo[] = {KC_BSM4, KC_U, COMBO_END};
-const uint16_t PROGMEM colon_combo[] = {KC_BSM4, KC_L, COMBO_END};
-const uint16_t PROGMEM semicolon_combo[] = {KC_BSM4, KC_Y, COMBO_END};
-
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(reset_combo, QK_BOOT),
   COMBO(num_layer_combo, TO(3)),
-
-  COMBO(enter_combo, KC_ENTER),
-  COMBO(escape_combo, KC_ESCAPE),
-  COMBO(tab_combo, KC_ESCAPE),
-
-  COMBO(dot_combo, KC_DOT),
-  COMBO(comma_combo, KC_COMM),
-  COMBO(question_mark_combo, LSFT(KC_MINS)),
-  COMBO(exclamation_mark_combo, LSFT(KC_1)),
-  COMBO(slash_combo, LSFT(KC_7)),
-  COMBO(colon_combo, LSFT(KC_DOT)),
-  COMBO(semicolon_combo, LSFT(KC_COMM)),
 };

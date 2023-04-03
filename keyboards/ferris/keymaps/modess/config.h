@@ -6,5 +6,5 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 #define QUICK_TAP_TERM 0
 
-#define COMBO_COUNT 12
+#define COMBO_COUNT 2
 #define COMBO_TERM 50
