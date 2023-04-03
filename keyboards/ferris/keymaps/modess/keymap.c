@@ -41,34 +41,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ALPHA] = LAYOUT(
-//    ┌────┬────┬────┬───────┬──────┐   ┌──────┬────────┬────┬─────┬─────┐
-//    │ q  │ w  │ f  │   p   │  b   │   │  j   │   l    │ u  │  y  │ del │
-//    ├────┼────┼────┼───────┼──────┤   ├──────┼────────┼────┼─────┼─────┤
-//    │ mA │ mR │ mS │  mT   │  g   │   │  m   │   mN   │ mE │ mI  │ mO  │
-//    ├────┼────┼────┼───────┼──────┤   ├──────┼────────┼────┼─────┼─────┤
-//    │ z  │ x  │ c  │   d   │  v   │   │  k   │   h    │ [  │ "'" │  ;  │
-//    └────┴────┴────┼───────┼──────┤   ├──────┼────────┼────┴─────┴─────┘
-//                   │ MO(1) │ sPM3 │   │ bSM4 │ OSL(2) │                 
-//                   └───────┴──────┘   └──────┴────────┘                 
-  KC_Q  , KC_W  , KC_F  , KC_P  , KC_B    ,     KC_J    , KC_L   , KC_U    , KC_Y    , KC_DELETE,
-  KC_MA , KC_MR , KC_MS , KC_MT , KC_G    ,     KC_M    , KC_MN  , KC_ME   , KC_MI   , KC_MO    ,
-  KC_Z  , KC_X  , KC_C  , KC_D  , KC_V    ,     KC_K    , KC_H   , KC_LBRC , KC_QUOT , KC_SCLN  ,
-                          MO(1) , KC_SPM3 ,     KC_BSM4 , OSL(2)                                
+//    ┌────┬────┬────┬────────┬──────┐   ┌──────┬────────┬────┬─────┬─────┐
+//    │ q  │ w  │ f  │   p    │  b   │   │  j   │   l    │ u  │  y  │ del │
+//    ├────┼────┼────┼────────┼──────┤   ├──────┼────────┼────┼─────┼─────┤
+//    │ mA │ mR │ mS │   mT   │  g   │   │  m   │   mN   │ mE │ mI  │ mO  │
+//    ├────┼────┼────┼────────┼──────┤   ├──────┼────────┼────┼─────┼─────┤
+//    │ z  │ x  │ c  │   d    │  v   │   │  k   │   h    │ [  │ "'" │  ;  │
+//    └────┴────┴────┼────────┼──────┤   ├──────┼────────┼────┴─────┴─────┘
+//                   │ OSL(1) │ sPM3 │   │ bSM4 │ OSL(2) │                 
+//                   └────────┴──────┘   └──────┴────────┘                 
+  KC_Q  , KC_W  , KC_F  , KC_P   , KC_B    ,     KC_J    , KC_L   , KC_U    , KC_Y    , KC_DELETE,
+  KC_MA , KC_MR , KC_MS , KC_MT  , KC_G    ,     KC_M    , KC_MN  , KC_ME   , KC_MI   , KC_MO    ,
+  KC_Z  , KC_X  , KC_C  , KC_D   , KC_V    ,     KC_K    , KC_H   , KC_LBRC , KC_QUOT , KC_SCLN  ,
+                          OSL(1) , KC_SPM3 ,     KC_BSM4 , OSL(2)                                
 ),
 
 [_NAV] = LAYOUT(
 //    ┌──────┬─────────────┬──────────────┬──────────────┬────┐   ┌────┬──────────────┬──────────────┬─────────────┬──────────────┐
-//    │  no  │    mute     │     vold     │     volu     │ no │   │ no │     home     │      up      │     end     │      no      │
+//    │  no  │    mute     │     vold     │     volu     │ no │   │ no │     home     │      up      │     end     │     ins      │
 //    ├──────┼─────────────┼──────────────┼──────────────┼────┤   ├────┼──────────────┼──────────────┼─────────────┼──────────────┤
 //    │ lsft │ GUI_T(mprv) │ LALT_T(mply) │ LCTL_T(mnxt) │ no │   │ no │ RCTL_T(left) │ LALT_T(down) │ GUI_T(rght) │ RSFT_T(pgup) │
 //    ├──────┼─────────────┼──────────────┼──────────────┼────┤   ├────┼──────────────┼──────────────┼─────────────┼──────────────┤
-//    │  no  │     no      │      no      │      no      │ no │   │ no │   CW_TOGG    │     ins      │    caps     │     pgdn     │
+//    │  no  │     no      │     caps     │   CW_TOGG    │ no │   │ no │     ent      │     esc      │     tab     │     pgdn     │
 //    └──────┴─────────────┴──────────────┼──────────────┼────┤   ├────┼──────────────┼──────────────┴─────────────┴──────────────┘
 //                                        │      no      │ no │   │ no │      no      │                                            
 //                                        └──────────────┴────┘   └────┴──────────────┘                                            
-  KC_NO   , KC_MUTE        , KC_VOLD         , KC_VOLU         , KC_NO ,     KC_NO , KC_HOME         , KC_UP           , KC_END          , KC_NO          ,
+  KC_NO   , KC_MUTE        , KC_VOLD         , KC_VOLU         , KC_NO ,     KC_NO , KC_HOME         , KC_UP           , KC_END          , KC_INS         ,
   KC_LSFT , GUI_T(KC_MPRV) , LALT_T(KC_MPLY) , LCTL_T(KC_MNXT) , KC_NO ,     KC_NO , RCTL_T(KC_LEFT) , LALT_T(KC_DOWN) , GUI_T(KC_RIGHT) , RSFT_T(KC_PGUP),
-  KC_NO   , KC_NO          , KC_NO           , KC_NO           , KC_NO ,     KC_NO , CW_TOGG         , KC_INS          , KC_CAPS         , KC_PGDN        ,
+  KC_NO   , KC_NO          , KC_CAPS         , CW_TOGG         , KC_NO ,     KC_NO , KC_ENTER        , KC_ESC          , KC_TAB          , KC_PGDN        ,
                                                KC_NO           , KC_NO ,     KC_NO , KC_NO                                                                
 ),
 
@@ -78,30 +78,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ├─────────┼─────────┼─────────┼─────────┼────────────┤   ├─────────────┼─────────┼────────────┼─────────┼─────────┤
 //    │ RALT(8) │ RALT(7) │ LSFT(8) │ RALT(4) │  LSFT(=)   │   │   LSFT(0)   │    /    │  LSFT(9)   │ RALT(0) │ RALT(9) │
 //    ├─────────┼─────────┼─────────┼─────────┼────────────┤   ├─────────────┼─────────┼────────────┼─────────┼─────────┤
-//    │ LSFT(1) │ LSFT(6) │ LSFT(7) │ LSFT(2) │ RALT(iso\) │   │     no      │  iso--  │  RALT(-)   │ LSFT(3) │ LSFT(-) │
+//    │ LSFT(1) │ LSFT(6) │ LSFT(7) │  iso--  │ RALT(iso\) │   │     no      │ LSFT(2) │  RALT(-)   │ LSFT(3) │ LSFT(-) │
 //    └─────────┴─────────┴─────────┼─────────┼────────────┤   ├─────────────┼─────────┼────────────┴─────────┴─────────┘
 //                                  │    .    │     ,      │   │     no      │   no    │                                 
 //                                  └─────────┴────────────┘   └─────────────┴─────────┘                                 
   LSFT(KC_5) , KC_MINS    , KC_NUBS    , LSFT(KC_DOT) , RALT(KC_RBRC) ,     LSFT(KC_NUHS) , LSFT(KC_COMM) , LSFT(KC_NUBS) , LSFT(KC_SLSH) , RALT(KC_2)   ,
   RALT(KC_8) , RALT(KC_7) , LSFT(KC_8) , RALT(KC_4)   , LSFT(KC_EQL)  ,     LSFT(KC_0)    , KC_SLSH       , LSFT(KC_9)    , RALT(KC_0)    , RALT(KC_9)   ,
-  LSFT(KC_1) , LSFT(KC_6) , LSFT(KC_7) , LSFT(KC_2)   , RALT(KC_NUBS) ,     KC_NO         , KC_NUHS       , RALT(KC_MINS) , LSFT(KC_3)    , LSFT(KC_MINS),
+  LSFT(KC_1) , LSFT(KC_6) , LSFT(KC_7) , KC_NUHS      , RALT(KC_NUBS) ,     KC_NO         , LSFT(KC_2)    , RALT(KC_MINS) , LSFT(KC_3)    , LSFT(KC_MINS),
                                          KC_DOT       , KC_COMM       ,     KC_NO         , KC_NO                                                        
 ),
 
 [_NUM] = LAYOUT(
-//    ┌───────────┬──────────┬───────────┬───────────┬────┐   ┌────┬────┬───┬───┬────┐
-//    │    no     │    no    │    no     │    no     │ no │   │ no │ 7  │ 8 │ 9 │ no │
-//    ├───────────┼──────────┼───────────┼───────────┼────┤   ├────┼────┼───┼───┼────┤
-//    │ LSFT_T(1) │ GUI_T(2) │ LALT_T(3) │ LCTL_T(4) │ no │   │ no │ 4  │ 5 │ 6 │ 0  │
-//    ├───────────┼──────────┼───────────┼───────────┼────┤   ├────┼────┼───┼───┼────┤
-//    │    no     │    no    │    no     │    no     │ no │   │ no │ 1  │ 2 │ 3 │ no │
-//    └───────────┴──────────┴───────────┼───────────┼────┤   ├────┼────┼───┴───┴────┘
-//                                       │   TO(0)   │ no │   │ no │ no │             
-//                                       └───────────┴────┘   └────┴────┘             
-  KC_NO        , KC_NO       , KC_NO        , KC_NO        , KC_NO ,     KC_NO , KC_7  , KC_8 , KC_9 , KC_NO,
-  LSFT_T(KC_1) , GUI_T(KC_2) , LALT_T(KC_3) , LCTL_T(KC_4) , KC_NO ,     KC_NO , KC_4  , KC_5 , KC_6 , KC_0 ,
-  KC_NO        , KC_NO       , KC_NO        , KC_NO        , KC_NO ,     KC_NO , KC_1  , KC_2 , KC_3 , KC_NO,
-                                              TO(0)        , KC_NO ,     KC_NO , KC_NO                      
+//    ┌───────────┬──────────┬───────────┬───────────┬─────┐   ┌────┬────┬───┬───┬────┐
+//    │    no     │    no    │    no     │    no     │ no  │   │ no │ 7  │ 8 │ 9 │ no │
+//    ├───────────┼──────────┼───────────┼───────────┼─────┤   ├────┼────┼───┼───┼────┤
+//    │ LSFT_T(1) │ GUI_T(2) │ LALT_T(3) │ LCTL_T(4) │ no  │   │ no │ 4  │ 5 │ 6 │ 0  │
+//    ├───────────┼──────────┼───────────┼───────────┼─────┤   ├────┼────┼───┼───┼────┤
+//    │    no     │    no    │    no     │    no     │ no  │   │ no │ 1  │ 2 │ 3 │ no │
+//    └───────────┴──────────┴───────────┼───────────┼─────┤   ├────┼────┼───┴───┴────┘
+//                                       │   TO(0)   │ spc │   │ no │ no │             
+//                                       └───────────┴─────┘   └────┴────┘             
+  KC_NO        , KC_NO       , KC_NO        , KC_NO        , KC_NO  ,     KC_NO , KC_7  , KC_8 , KC_9 , KC_NO,
+  LSFT_T(KC_1) , GUI_T(KC_2) , LALT_T(KC_3) , LCTL_T(KC_4) , KC_NO  ,     KC_NO , KC_4  , KC_5 , KC_6 , KC_0 ,
+  KC_NO        , KC_NO       , KC_NO        , KC_NO        , KC_NO  ,     KC_NO , KC_1  , KC_2 , KC_3 , KC_NO,
+                                              TO(0)        , KC_SPC ,     KC_NO , KC_NO                      
 ),
 
 [_FUNC] = LAYOUT(
