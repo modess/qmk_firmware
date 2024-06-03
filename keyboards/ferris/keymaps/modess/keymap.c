@@ -27,21 +27,27 @@ enum ferris_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ALPHA] = LAYOUT(
-  KC_Q  , KC_W  , KC_F  , KC_P    , KC_B    ,     KC_J    , KC_L    , KC_U   , KC_Y    , KC_NO  ,
-  KC_MA , KC_MR , KC_MS , KC_MT   , KC_G    ,     KC_M    , KC_MN   , KC_ME  , KC_MI   , KC_MO  ,
-  KC_Z  , LT(0,KC_X)  , LT(0,KC_C)  , KC_D    , LT(0,KC_V)    ,     KC_K    , KC_H    , KC_LBRC , KC_QUOT, KC_SCLN,
+  KC_Q  , KC_W        , KC_F        , KC_P    , KC_B        , KC_J    , KC_L    , KC_U    , KC_Y    , KC_NO  ,
+  KC_MA , KC_MR       , KC_MS       , KC_MT   , KC_G        , KC_M    , KC_MN   , KC_ME   , KC_MI   , KC_MO  ,
+  KC_Z  , LT(0,KC_X)  , LT(0,KC_C)  , KC_D    , LT(0,KC_V)  , KC_K    , KC_H    , KC_LBRC , KC_QUOT     , KC_SCLN,
                           KC_ESM3 , KC_SPM1 ,     KC_BSM2 , KC_ENM4
 ),
 
 [_NAV] = LAYOUT(
-  KC_NO   , KC_MUTE        , KC_VOLD         , KC_VOLU         , KC_NO ,     KC_NO     , KC_HOME         , KC_UP           , KC_END          , KC_INS         ,
-  KC_LSFT , GUI_T(KC_MPRV) , LALT_T(KC_MPLY) , LCTL_T(KC_MNXT) , KC_NO ,     KC_NO     , RCTL_T(KC_LEFT) , LALT_T(KC_DOWN) , GUI_T(KC_RIGHT) , RSFT_T(KC_PGUP),
-  KC_NO   , KC_NO          , KC_NO           , KC_NO           , KC_NO ,     KC_NO     , CW_TOGG         , KC_CAPS         , KC_NO           , KC_PGDN        ,
+  KC_NO   , KC_MUTE        , KC_VOLD         , KC_VOLU         , KC_NO ,     KC_PGUP     , KC_HOME         , KC_UP           , KC_END          , KC_NO         ,
+  KC_LSFT , GUI_T(KC_MPRV) , LALT_T(KC_MPLY) , LCTL_T(KC_MNXT) , KC_NO ,     KC_NO     , KC_H , KC_J , KC_K , KC_L,
+  KC_NO   , KC_NO          , KC_NO           , KC_NO           , KC_NO ,     KC_PGDN     , KC_LEFT         , KC_DOWN         , KC_UP           , KC_RIGHT        ,
                                                KC_NO           , KC_NO ,     KC_ENTER  , KC_DELETE
 ),
 
+// [_SYM] = LAYOUT(
+//   LSFT(KC_5) , KC_MINS    , KC_NUBS    , LSFT(KC_DOT) , RALT(KC_RBRC) ,     LSFT(KC_NUHS) , LSFT(KC_COMM) , LSFT(KC_NUBS) , LSFT(KC_SLSH) , LSFT(KC_3)   ,
+//   RALT(KC_8), RALT(KC_7) , LSFT(KC_8) , RALT(KC_4)   , LSFT(KC_EQL)  ,     LSFT(KC_0)    , KC_SLSH       , LSFT(KC_9)    , RALT(KC_0)    , RALT(KC_9)   ,
+//   LSFT(KC_1) , LSFT(KC_6) , LSFT(KC_7) , KC_NUHS      , RALT(KC_NUBS) ,     KC_EQL        , LSFT(KC_2)    , RALT(KC_MINS) , RALT(KC_2)    , LSFT(KC_MINS),
+//                                          KC_COMM      , KC_DOT        ,     KC_NO         , KC_NO
+// ),
 [_SYM] = LAYOUT(
-  LSFT(KC_5) , KC_MINS    , KC_NUBS    , LSFT(KC_DOT) , RALT(KC_RBRC) ,     LSFT(KC_NUHS) , LSFT(KC_COMM) , LSFT(KC_NUBS) , LSFT(KC_SLSH) , LSFT(KC_3)   ,
+  LSFT(KC_5) , KC_MINS    , KC_NUBS    , LSFT(KC_DOT) , LSFT(KC_5) ,     LSFT(KC_NUHS) , LSFT(KC_COMM) , LSFT(KC_NUBS) , LSFT(KC_SLSH) , LSFT(KC_3)   ,
   RALT(KC_8), RALT(KC_7) , LSFT(KC_8) , RALT(KC_4)   , LSFT(KC_EQL)  ,     LSFT(KC_0)    , KC_SLSH       , LSFT(KC_9)    , RALT(KC_0)    , RALT(KC_9)   ,
   LSFT(KC_1) , LSFT(KC_6) , LSFT(KC_7) , KC_NUHS      , RALT(KC_NUBS) ,     KC_EQL        , LSFT(KC_2)    , RALT(KC_MINS) , RALT(KC_2)    , LSFT(KC_MINS),
                                          KC_COMM      , KC_DOT        ,     KC_NO         , KC_NO
