@@ -1,11 +1,7 @@
 #pragma once
 
-#define TAPPING_TERM 250
+#define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
-#define IGNORE_MOD_TAP_INTERRUPT
 #define QUICK_TAP_TERM 0
 
-#define COMBO_COUNT 3
 #define COMBO_TERM 50
-
-#define ONESHOT_TIMEOUT 500
